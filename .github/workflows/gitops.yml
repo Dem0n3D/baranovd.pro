@@ -23,16 +23,12 @@ jobs:
       - name: Get Version
         run: echo "VERSION=$(git describe --tags --abbrev=0 | cut -c 2-)" >> $GITHUB_ENV
 
-      - name: Switch branch to gitops
-        run: git checkout gitops
-
-      - name: Get .helm
-        run: git checkout v${VERSION} -- .helm
-
-      - name: Update version
-        run: sed -i "s/_version_/$VERSION/" .helm/values.yaml
-
-      - run: git add .helm
+      - name: Set Version
+        run: |
+          git checkout gitops
+          git checkout v${VERSION} -- .helm
+          sed -i "s/_version_/$VERSION/" .helm/values.yaml
+          git add .helm
 
       - name: Commit and push changes
         uses: devops-infra/action-commit-push@v0.9.2
