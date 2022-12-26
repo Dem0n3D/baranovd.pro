@@ -1,4 +1,4 @@
 name: baranovd.pro
-version: $_version
+version: 1.0.0
 apiVersion: v2
 appVersion: "1.0.0"
