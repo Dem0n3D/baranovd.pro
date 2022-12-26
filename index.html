@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="img/favicon.png" />
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Dmitriy Baranov's Portfolio</title>
+</head>
+<body>
+    <div class="container">
+        <div class="window">
+            <div class="nav">
+                <a href="index.html">About Me</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="contact.html">Contact Me</a>
+            </div>
+            <a onclick="openMenu()" class="nav-mobile">
+                <div class="nav-mobile-header">About Me</div>
+                <div class="select-arrow"></div>
+            </a>
+            <div class="content">
+                <div class="scrolling">
+
+                    <div class="article">
+                        <h1>SOFTWARE ENGINEER</h1>
+                        <p>A MMath, IT expert with two higher educations in Software Engineering and Information Systems
+                            Management; a Senior Software Developer, Site Reliability Engineer of <b id="yearsText">
+                                <script>document.getElementById('yearsText').appendChild(document.createTextNode((new Date().getFullYear()) - 2011))</script>
+                            years of experience</b> with strong math/statistical background and CRM/SaaS development.</p>
+                        
+                        <div class="about">
+                            <div>
+                                <h1>SKILLS</h1>
+                                <ul>
+                                    <li>Machine Learning</li>
+                                    <li>Big Data Analytics</li>
+                                    <li>CRM Development</li>
+                                    <li>Web Development</li>
+                                    <li>Site Reliability Engineering</li>
+                                    <li>SaaS Development</li>
+                                    <li>Audio transcription and markup</li>
+                                </ul>
+                                <h1>CERTIFICATES</h1>
+                                <ul>
+                                    <li>
+                                        <div>Computing for Data Analysis (with distinction)</div>
+                                        <div class="note">JOHNS HOPKINS BLOOMBERG SCHOOL OF PUBLIC HEALTH, COURSERA</div>
+                                    </li>
+                                    <li>
+                                        <div>Natural Language Processing (with distinction)</div>
+                                        <div class="note">COLUMBIA UNIVERSITY, COURSERA</div>
+                                    </li>
+                                    <li>
+                                        <div>Social Network Analysis</div>
+                                        <div class="note">SCHOOL OF INFORMATION, CENTER FOR THE STUDY OF COMPLEX SYSTEMS, EECS UNIVERSITY OF MICHIGAN, COURSERA</div>
+                                    </li>
+                                    <li>
+                                        <div>Machine Learning Intercourse</div>
+                                        <div class="note">NATIONAL RESEARCH UNIVERSITY HIGHER SCHOOL OF ECONOMICS AND YANDEX SCHOOL OF DATA ANALYSIS, COURSERA</div>
+                                    </li>
+                                </ul>
+                                <h1>EDUCATION</h1>
+                                <ul>
+                                    <li>
+                                        <div>Mathematics and Software Development</div>
+                                        <div class="note">09/2006 - 06/2011, ORENBURG STATE UNIVERSITY</div>
+                                    </li>
+                                    <li>
+                                        <div>Cyber Security</div>
+                                        <div class="note">06/2014 - 03/2015, ORENBURG STATE UNIVERSITY</div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h1>DEVOPS</h1>
+                                <ul>
+                                    <li>Ansible</li>
+                                    <li>Gitlab CI</li>
+                                    <li>Kubernetes</li>
+                                    <li>Docker Swarm</li>
+                                </ul>
+                                <h1>STACK</h1>
+                                <ul>
+                                    <li>React</li>
+                                    <li>NextJS</li>
+                                    <li>FastAPI</li>
+                                    <li>SQLAlchemy</li>
+                                    <li>PostgreSQL</li>
+                                    <li>Ionic</li>
+                                    <li>Solr</li>
+                                    <li>Prometheus</li>
+                                    <li>Jaeger</li>
+                                </ul>
+                                <h1>WORK EXPERIENCE</h1>
+                                <ul>
+                                    <li>
+                                        <div>Chief Technology Oﬃcer, Co-founder</div>
+                                        <div class="note">04/2021 - Present, neoTrial Ltd.</div>
+                                    </li>
+                                    <li>
+                                        <div>Software Developer, Co-founder</div>
+                                        <div class="note">09/2020 - Present, Human Semantics Ltd.</div>
+                                    </li>
+                                    <li>
+                                        <div>Software Developer</div>
+                                        <div class="note">09/2016 - 10/2018, Mirtesen Ltd.</div>
+                                    </li>
+                                    <li>
+                                        <div>Lecturer</div>
+                                        <div class="note">09/2011 - 12/2018, Orenburg State University</div>
+                                    </li>
+                                </ul>                                
+                            </div>
+                        </div>
+
+                        <h1 style="text-align: center">THE END</h1>
+                    </div>
+                    
+
+                </div>
+                <div class="doom">
+                    <div class="armor">
+                        <div>
+                            <span>EXPERIENCE: </span> 
+                            <span id="years">
+                                <script>document.getElementById('years').appendChild(document.createTextNode((new Date().getFullYear()) - 2011))</script>
+                            </span>
+                            <span> YEARS</span>
+                            <br />
+                            <span>FULL-STACK DEVELOPMENT</span>   
+                        </div> 
+                    </div>
+                    <div class="avatar-block"><img class="avatar" src="img/pic.png" alt="" /></div>
+                    <div class="armor">
+                        <div>
+                            <span>PYTHON JS GO</span>
+                            <br />
+                            <span>SQL HTML CSS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="logo">
+                <img src="img/logo.svg" alt="" />
+            </div>
+            <div class="avatar-mobile"><img class="avatar" src="img/pic.png" alt="" /></div>
+        </div>
+        <div class="mobile-menu" id="mobileMenu" style="display: none;">
+            <a onclick="openMenu()" class="nav-mobile">
+                <div class="nav-mobile-header">GO TO</div>
+                <div class="close-menu"></div>
+            </a>
+            <a class="mobile-menu-item" href="index.html" onclick="openMenu();">About Me</a>
+            <a class="mobile-menu-item" href="portfolio.html" onclick="openMenu();">Portfolio</a>
+            <a class="mobile-menu-item" href="contact.html" onclick="openMenu();">Contact Me</a>
+        </div>
+    </div>
+
+    <script>
+        // Hide/open desktop/mobile menu
+        function openMenu() {
+                let menu = document.getElementById("mobileMenu");
+                if (menu.style.display === "none") {
+                    menu.style.display = "flex";
+                } else {
+                    menu.style.display = "none";
+                }
+            }
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="111.45787mm"
+   height="111.45787mm"
+   viewBox="0 0 111.45787 111.45787"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   sodipodi:docname="close-wht.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="0.64"
+     inkscape:cx="242.1875"
+     inkscape:cy="178.125"
+     inkscape:window-width="1920"
+     inkscape:window-height="1053"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-49.271065,-92.771065)">
+    <rect
+       style="fill:none;stroke:none;stroke-width:0.264583"
+       id="rect145"
+       width="111.45787"
+       height="111.45787"
+       x="49.271065"
+       y="92.771065" />
+    <g
+       aria-label="r"
+       id="text20151"
+       style="font-size:109.999px;line-height:1.25;-inkscape-font-specification:'sans-serif, Normal';stroke-width:0.982136;fill:#ffffff">
+      <path
+         d="m 141.09342,184.59343 h -10.3124 L 105,159.13468 79.541248,184.59343 H 68.906579 V 174.28102 L 94.365332,148.50001 68.906579,123.04125 V 112.40658 H 79.541248 L 105,137.86534 130.78102,112.40658 h 10.3124 v 10.63467 l -25.45875,25.45876 25.45875,25.45875 z"
+         style="font-family:Webdings;-inkscape-font-specification:'Webdings, Normal';fill:#ffffff"
+         id="path45679" />
+    </g>
+  </g>
+</svg>

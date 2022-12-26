@@ -1,0 +1,104 @@
+/* The work below, CSSBox, is released under the Creative Commons
+   Attribution-ShareAlike 4.0 license and is available on
+   https://github.com/TheLastProject/CSSBox. You are not required to add
+   additional credit to your website, just leave the above text in this file */
+div.cssbox {
+  display: inline-block;
+  width: 11rem;
+  max-height: 6.19rem;
+  overflow: hidden;
+  border: solid .25rem black;
+  
+}
+
+.cssbox_thumb {
+  width: 100%;
+}
+
+span.cssbox_full {
+  z-index: 999999;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.95);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  cursor: default;
+  transition: opacity 0.5s linear;
+}
+
+span.cssbox_full img {
+  position: fixed;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  max-height: 90%;
+  max-width: 90%;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 20px black;
+}
+
+a.cssbox_close,
+a.cssbox_prev,
+a.cssbox_next {
+  z-index: 999999;
+  position: fixed;
+  text-decoration: none;
+  visibility: hidden;
+  color: white;
+}
+
+a.cssbox_close {
+  top: 1%;
+  right: 1%;
+  width: 3rem;
+  height: 3rem;
+  background-size: 3rem;
+  background-image: url(img/close-wht.svg);
+}
+
+a.cssbox_prev,
+a.cssbox_next {
+  top: 50%;
+  transform: translate(0%, -50%);
+  width: 3rem;
+}
+
+a.cssbox_prev img,
+a.cssbox_next img {
+  width: 3rem;
+}
+
+a.cssbox_prev {
+  left: 5%;
+}
+
+a.cssbox_next {
+  right: 5%;
+}
+
+a:target ~ a.cssbox_close,
+a:target ~ a.cssbox_prev,
+a:target ~ a.cssbox_next {
+  visibility: visible;
+}
+
+a:target > img.cssbox_thumb + span.cssbox_full {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: initial;
+}
+/* This is the end of CSSBox */
+
+@media (max-width: 950px) {
+  div.cssbox {
+    width: 100%;
+    height: auto;
+    max-height: calc(56.25vw - 4rem);
+  }
+}
