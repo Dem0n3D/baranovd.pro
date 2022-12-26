@@ -1,0 +1,86 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Chart.Name }}-{{ .Release.Name }}-web
+  namespace: {{ .Release.Namespace }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ .Chart.Name }}-{{ .Release.Name }}-web
+  strategy:
+    rollingUpdate:
+      maxSurge: 0
+      maxUnavailable: 1
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: {{ .Chart.Name }}-{{ .Release.Name }}-web
+    spec:
+      containers:
+      - image: {{ .Values.image.name }}:{{ default .Chart.AppVersion .Values.image.tag }}
+        name: nginx
+        ports:
+        - containerPort: 80
+        readinessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: http://localhost:80
+            port: 80
+          periodSeconds: 30
+          successThreshold: 1
+          timeoutSeconds: 1
+        livenessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: http://localhost:80
+            port: 80
+          periodSeconds: 30
+          successThreshold: 1
+          timeoutSeconds: 1
+          initialDelaySeconds: 60
+        resources:
+          requests:
+            cpu: 100m
+            memory: 128Mi
+          limits:
+            cpu: 200m
+            memory: 256Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Chart.Name }}-{{ .Release.Name }}-web-svc
+  namespace: {{ .Release.Namespace }}
+spec:
+  ports:
+  - port: 80
+    targetPort: 80
+  selector:
+    app: {{ .Chart.Name }}-{{ .Release.Name }}-web
+  type: ClusterIP
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ .Chart.Name }}-{{ .Release.Name }}-ingress
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-wild"
+spec:
+  ingressClassName: traefik
+  tls:
+  - hosts:
+    - "baranovd.pro"
+    secretName: baranovd-pro-tls
+  rules:
+  - host: baranovd.pro
+    http:
+        paths:
+        - pathType: Prefix
+          path: "/"
+          backend:
+            service:
+              name: {{ .Chart.Name }}-{{ .Release.Name }}-web-svc
+              port:
+                number: 80
